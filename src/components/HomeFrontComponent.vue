@@ -16,16 +16,11 @@
         </body>
       </div>
 
-      <div class="bg-slate-300 ">
-        <body class="p-10">
-          <div class="relative w-[4005x]">
-            <img src="http://www.siamplan.com/images/freeplan/fp044/free_siamplan_fp044_01.jpg"  style="width :600px;height: 300px;">
             <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
               <h3 class="text-xl text-white font-bold">
                 แบบบ้าน HM-02</h3>
             </div>
           </div>
-        </body>
       </div>
 
       
