@@ -2,30 +2,243 @@
 @tailwind components;
 @tailwind utilities;
 
+/* FOOTER */
+@font-face {
+  font-family: 'THSarabunNew';
+  src: url('./assets/fonts/THSarabun.ttf') format('truetype');
+  /* Add more font styles (e.g., bold, italic, etc.) if needed */
+}
+
+/* FORM */
+form {
+  margin: 2rem auto;
+  max-width: 40rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.form-control {
+  margin: 0.5rem 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  font: inherit;
+  margin-top: 0.5rem;
+}
+
+select {
+  width: auto;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: inline-block;
+  width: auto;
+  margin-right: 1rem;
+}
+
+input[type='checkbox']+label,
+input[type='radio']+label {
+  font-weight: normal;
+}
+
+
+
+
+.ADDButton,
+.EDITButton,
+.DELETEButton {
+  font-size: 2rem;
+  width: 5px;
+  /* Set the width to your desired value */
+  padding: 0.5rem 1rem;
+  /* Add padding for better appearance */
+  border: none;
+  /* Remove the border if it's not needed */
+  cursor: pointer;
+  /* Add a cursor pointer to indicate interactivity */
+
+  /* Rest of your styles */
+  /* ... */
+}
+
+.ADDButton {
+  background-color: green !important;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+}
+
+.EDITButton {
+  background-color: rgb(255, 255, 0) !important;
+  color: black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+}
+
+.DELETEButton {
+  background-color: rgb(110, 3, 3) !important;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+}
+
+button {
+  font: inherit;
+  border: 1px solid rgb(69, 69, 69);
+  background-color: rgb(69, 69, 69);
+  color: white;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  border-radius: 15px;
+  /* Reduced border radius */
+}
+
+button:hover,
+button:active {
+  border-color: rgb(34, 34, 34);
+  background-color: rgb(34, 34, 34);
+}
+
+/* Additional CSS */
+input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+input[type="radio"]:checked {
+  background-color: #0076bb;
+}
+
 .modal {
-    display: block;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-  .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.horizontal-line {
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.table-fixed {
+  /* Add your table styles here */
+  /* Example styles */
+  width: 100%;
+  /* Set the width to 100% */
+  margin: 0;
+  /* Remove any default margins */
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  /* Add a border radius value for smooth corners */
+}
+
+.table-fixed th {
+  background-color: rgb(69, 69, 69);
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 15px;
+
+}
+
+.table-fixed td {
+  padding: 12px 15px;
+  word-wrap: break-word;
+
+}
+
+.table-fixed tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table-fixed tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table-fixed tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(69, 69, 69);
+}
+
+.table-fixed tbody tr.active-row {
+  font-weight: bold;
+  color: rgb(69, 69, 69);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 40px;
+  height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  margin-right: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Add custom styles for the checked state of the checkbox */
+input[type="checkbox"]:checked {
+  background-color: #0076bb;
+  border: 2px solid #0076bb;
+}
+
+
+/* Add custom styles for the label (optional) */
+label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}

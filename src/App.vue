@@ -1,11 +1,10 @@
 <template>
-  <header-component :title="title" :imageurl="imageurl" :profileurl="profileurl"
-    style="font-family: Prompt; font-size: large;"></header-component>
+  <header-component style="font-family: Prompt; font-size: large;"></header-component>
   <main>
     <router-view></router-view>
   </main>
-  <footer-component :title="title" :footertext="footertext" :imageurl="imageurl"
-    style="font-family: Prompt; font-size: large;"></footer-component>
+  <!-- <footer-component :title="title" :footertext="footertext" :imageurl="imageurl"
+    style="font-family: Prompt; font-size: large;"></footer-component> -->
 </template>
 
 <script>
